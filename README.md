@@ -10,7 +10,8 @@ Once a image is pushed to a registry, it is very easy to deploy to any cloud hos
  - Docker
  - Dockerhub
  - Github Actions
- - Jest JavaScript testing framework
+ - Jest
+ - Supertest
 
  ## Diagram
  <img src="diagram.png">

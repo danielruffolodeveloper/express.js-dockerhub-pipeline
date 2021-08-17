@@ -1,0 +1,20 @@
+{
+  "name": "express_dockerhub_ci",
+  "version": "1.0.0",
+  "description": "A demo CI application for sending express.js application to Dockerhub via Github Actions",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6",
+    "supertest": "^6.1.4"
+  }
+}
