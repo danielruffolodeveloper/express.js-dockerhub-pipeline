@@ -22,7 +22,7 @@ jobs:
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD 
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag druffolo/cicd:$GITHUB_RUN_NUMBER --build-arg GIT_SHA=$GITHUB_SHA NODE_ENV="Production"  
+      run: docker build . --file Dockerfile --tag druffolo/cicd:$GITHUB_RUN_NUMBER --build-arg GIT_SHA=$GITHUB_SHA --build-arg NODE_ENV="Production"  
       
     - name: Docker Push
       run: docker push druffolo/cicd:$GITHUB_RUN_NUMBER
