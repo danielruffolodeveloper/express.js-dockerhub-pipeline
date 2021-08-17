@@ -4,6 +4,7 @@ An example repository of how Github Actions can be used with Docker to test and 
 ## Purpose
 The purpose of this code body is to demonstrate the concept of building , testing and deploying a express.js application to Dockerhub via Github Actions CICD. 
 Once a image is pushed to a registry, it is very easy to deploy to any cloud hosting services as long as Dockerhub integration is avaliable.
+Within this example , The use of test packages such as Jest and Supertest outline how testing can enhance the pipline and perform a check on the endpoint before we build the final docker image and send it off to the registry.
 
 ## Technology
  - Express.js
@@ -52,4 +53,7 @@ DOCKER_PASSWORD: *******
 
 ```
 These should be your Dockerhub account credentials.
-Once this is done, test the action with a commit. If all goes well, your image should be pushed here. Note that it is a public image.
+Once this is done, test the action with a commit. If all goes well, your image should be pushed to your Dockerhub container registry.
+## Result:
+Your image will be pushed to dockerhub with the Actions run number set as the tag. in this instance, its 3 as the pipline has been ran 3 times.
+<img src="output.png">
