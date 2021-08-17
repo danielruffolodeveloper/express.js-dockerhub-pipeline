@@ -15,3 +15,41 @@ Once a image is pushed to a registry, it is very easy to deploy to any cloud hos
 
  ## Diagram
  <img src="diagram.png">
+
+## Run Locally
+ To run locally, run:
+```
+npm install 
+```
+Then navigate to:
+```
+http://Localhost:8080
+```
+
+## Run tests
+ To run tests locally, run:
+```
+npm run test 
+```
+Result should be:
+```
+PASS  ./server.test.js
+  Test Base Route GET /
+    √ checking for response object properties (28 ms)
+    √ Check content-type is JSON (4 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+
+```
+
+## Setup DockerHub CI and Github Actions
+ Before attempting, make sure you have a Dockerhub account.
+ To setup CI, in github repository navigate to 'settings' then 'secrets' and add 2 new secrets:
+```
+DOCKER_USER: *******
+DOCKER_PASSWORD: *******
+
+```
+These should be your Dockerhub account credentials.
+Once this is done, test the action with a commit. If all goes well, your image should be pushed here. Note that it is a public image.
